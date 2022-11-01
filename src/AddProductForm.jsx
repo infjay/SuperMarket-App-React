@@ -1,6 +1,6 @@
 export const AddProductForm = (props) => {
     const {onFormSubmit,name,onNameChange,description,onDescriptionChange,validation} = props
-    return <form onSubmit={props.onFormSubmit}>
+    return <form onSubmit={onFormSubmit}>
     <div>
         <label htmlFor="name">Name :</label>
         <input id="name" value={name} onChange={onNameChange}
