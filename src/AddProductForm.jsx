@@ -1,6 +1,10 @@
+import { useContext } from "react"
+import { AppContext } from "./AppContext"
+
 export const AddProductForm = (props) => {
+    const app = useContext(AppContext)
     const {onFormSubmit,name,onNameChange,description,onDescriptionChange,validation} = props
-    return <form onSubmit={onFormSubmit}>
+    return <form onSubmit={onFormSubmit} className={app.theme==="dark" ? "dark" :""}>
     <div>
         <label htmlFor="name">Name :</label>
         <input id="name" value={name} onChange={onNameChange}

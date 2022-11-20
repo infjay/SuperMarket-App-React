@@ -9,12 +9,10 @@ import React,{useContext} from "react"
 
 function App() {
   const app = useContext(AppContext)
-  return <>
-    <div className={app.theme==="dark" ? "dark":""}></div>
+  return <div className={app.theme==="dark" ? "dark":""}>
     <Navbar />
     <StoreFront />
-  </>
-    
+    </div>
 }
 
 const AppWrapper = ()=> {
