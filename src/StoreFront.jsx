@@ -37,7 +37,7 @@ const handleProductDelete = (id) => {
 }
 
 return <> 
-    <p>Show Prices in {app.currency}</p>
+    <p>Prices are in {app.currency}</p>
     <AddProductForm name={name} description={description} validation={validation} onNameChange={handleNameChange} onDescriptionChange={handleDescriptionChange} onFormSubmit={handleFormSubmit} />
     <div>
         {products.length === 0 && <p>Add your first product</p>}

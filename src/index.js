@@ -7,6 +7,8 @@ import { Navbar } from "./Navbar.js";
 import {AppContext} from "./AppContext.js";
 import React,{useContext} from "react"
 
+const API = fetch("https://firestore.googleapis.com/v1/projects/supermarket-6a8cb/databases/(default)/documents/products")
+
 function App() {
   const app = useContext(AppContext)
   return <div className={app.theme==="dark" ? "dark":""}>
