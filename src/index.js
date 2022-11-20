@@ -1,13 +1,33 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AppProvider } from './AppContext';
+import StoreFront from "./StoreFront";
+import { Navbar } from "./Navbar.js";
+import {AppContext} from "./AppContext.js";
+import React,{useContext} from "react"
 
+function App() {
+  const app = useContext(AppContext)
+  return <>
+    <div className={app.theme==="dark" ? "dark":""}></div>
+    <Navbar />
+    <StoreFront />
+  </>
+    
+}
+
+const AppWrapper = ()=> {
+  return (
+    <AppProvider>
+      <App />
+    </AppProvider>
+  )
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppWrapper />
   </React.StrictMode>
 );
 
