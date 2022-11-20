@@ -134,3 +134,12 @@ form {
   opacity: 0.5;
   cursor: default;
 }
+
+.dark {
+  background-color: #222;
+  color: white;
+}
+
+.dark .product {
+  background-color: #333;
+}
