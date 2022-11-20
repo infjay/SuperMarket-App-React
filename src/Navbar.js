@@ -10,7 +10,7 @@ export const Navbar = () => {
     Select Currency <select onChange={handleCurrencyChange}>
     <option value="EUR">EUR</option>
     <option value="USD">USD</option>
-    <option value="USD">USD</option>
+    <option value="GBP">GBP</option>
     </select> 
     Current Theme = {app.theme} <button onClick={app.toggleTheme}>Toggle Theme</button>
     <hr />
